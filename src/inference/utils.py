@@ -1,6 +1,10 @@
 import numpy as np
 import cv2
 from itertools import permutations, product
+from scipy import ndimage
+from collections import Counter
+from sklearn.cluster import DBSCAN
+import matplotlib.pyplot as plt
 
 def perp(a):
     b = np.empty_like(a)
@@ -87,12 +91,13 @@ def get_res(img):
         x, y = coord
         img_res = cv2.circle(img_res, (x, y), 2, (0, 0, 255), -1)
 
-    plt.figure(figsize=(20,10))
-    plt.subplot(1,3,1)
-    plt.imshow(img)
-    plt.subplot(1,3,2)
-    plt.imshow(label)
-    plt.subplot(1,3,3)
-    plt.imshow(img_res)
-    plt.tight_layout()
-    return centroid
+    centroid = np.array(sorted(centroid , key=lambda k: [k[1], k[0]])).reshape(10,10,2)
+
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    bbox = []
+    off = 3
+    for i,j in product(np.arange(9), repeat=2):
+        x0, x1, y0, y1 = [centroid[i,j][0], centroid[i+1,j+1][0], centroid[i,j][1], centroid[i+1,j+1][1]]
+        bbox.append([x0+off, x1, y0+off, y1])
+
+    return centroid, (label, img_res), bbox
