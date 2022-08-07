@@ -55,10 +55,36 @@ def get_res(img):
 
             inter.append(intersect(p1,p2,p3,p4))
         return [i for i in inter if i!=[0,0]]
-    
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+    def sort_centroid(c):
+        c = sorted(c , key=lambda k: k[1])
+        centroid = [sorted(c[10*idx:10*idx+10], key=lambda k: k[0]) for idx in range(10)]
+        return [i for s in centroid for i in s]
+
+    def bbox_from_centroid(centroid):
+        bbox, c = [], np.array(centroid.copy()).reshape(10,10,2)
+        for i,j in product(np.arange(9), repeat=2):
+            x0, x1, y0, y1 = [c[i,j][0], c[i+1,j+1][0], c[i,j][1], c[i+1,j+1][1]]
+            bbox.append([x0+3, x1, y0+3, y1])
+        return bbox
+
+    def find_centroid_from_lines(inter, t, h, w):
+        cls = DBSCAN(eps=t/100, min_samples=1).fit(np.array(inter))
+        centroid = []
+        for i in np.unique(cls.labels_):
+            idx = np.where(cls.labels_ == i)[0]
+            pt = [inter[i] for i in idx]
+            x,y = np.mean(np.array(pt)[:,0]).astype(int),np.mean(np.array(pt)[:,1]).astype(int)
+            if all([x>=0,y>=0,x<=w, y<=h]):
+                centroid.append([x,y])
+        return centroid
+    
+    # Image processing
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    # thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY,11,2)
     thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
+
+    # Remove digits in the grid
     label, _ = ndimage.label(thresh, np.ones((3,3)))
     t = (img.shape[0]*img.shape[1]) / 100
 
@@ -66,38 +92,28 @@ def get_res(img):
     for i in keep:
         label = np.where(label!=i, label, -1)
     gray = np.float32(np.where(label==-1, 0, 255))
-    label = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB) / 255
+    grid = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB) / 255
 
     # Detect points that form a line
     gray = np.invert(np.uint8(gray))
-    lines = cv2.HoughLinesP(gray, rho=1, theta=np.pi/180, threshold=50, minLineLength=5, maxLineGap=15)
+    lines = cv2.HoughLinesP(gray, rho=1.0, theta=np.pi/180, threshold=150, minLineLength=5, maxLineGap=10)
 
-    # Find intersections
+    # Find intersections & centroids & bboxes
     inter = find_intersections(lines)
-    cls = DBSCAN(eps=t/100, min_samples=1).fit(np.array(inter))
-
-    centroid = []
-    for i in np.unique(cls.labels_):
-        idx = np.where(cls.labels_ == i)[0]
-        pt = [inter[i] for i in idx]
-        centroid.append([np.mean(np.array(pt)[:,0]).astype(int),np.mean(np.array(pt)[:,1]).astype(int)])
-    
-    # Draw lines on the image
+    centroid = find_centroid_from_lines(inter, t, *gray.shape)
+    centroid = sort_centroid(centroid)
+    if len(centroid)==100:
+        bbox = bbox_from_centroid(centroid)
+    else:
+        bbox = []
+    # Draw results on the image
     img_res = img.copy()
     for line in lines:
         x1, y1, x2, y2 = line[0]
         img_res = cv2.line(img_res, (x1, y1), (x2, y2), (255, 0, 0), 1)
+
     for idx, coord in enumerate(centroid):
-        x, y = coord
-        img_res = cv2.circle(img_res, (x, y), 2, (0, 0, 255), -1)
-
-    centroid = np.array(sorted(centroid , key=lambda k: [k[1], k[0]])).reshape(10,10,2)
-
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    bbox = []
-    off = 3
-    for i,j in product(np.arange(9), repeat=2):
-        x0, x1, y0, y1 = [centroid[i,j][0], centroid[i+1,j+1][0], centroid[i,j][1], centroid[i+1,j+1][1]]
-        bbox.append([x0+off, x1, y0+off, y1])
-
-    return centroid, (label, img_res), bbox
+        img_res = cv2.circle(img_res, coord, 2, (0, 0, 255), -1)
+        img_res = cv2.putText(img_res, f'{idx}',coord,cv2.FONT_HERSHEY_SIMPLEX,0.5,(0, 255, 0),1,cv2.LINE_4)
+        
+    return centroid, (grid, img_res), bbox
