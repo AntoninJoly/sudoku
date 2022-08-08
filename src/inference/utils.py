@@ -5,6 +5,7 @@ from scipy import ndimage
 from collections import Counter
 from sklearn.cluster import DBSCAN
 import matplotlib.pyplot as plt
+from math import atan2
 
 def perp(a):
     b = np.empty_like(a)
@@ -58,8 +59,9 @@ def get_res(img):
 
     def sort_centroid(c):
         c = sorted(c , key=lambda k: k[1])
-        centroid = [sorted(c[10*idx:10*idx+10], key=lambda k: k[0]) for idx in range(10)]
-        return [i for s in centroid for i in s]
+        x = [-1]+list(np.where(np.diff(np.array(c)[:,1])>5)[0])+[len(c)]
+        row = [sorted(c[x[idx]+1:x[idx+1]+1], key=lambda k: k[0]) for idx in range(len(x)-1)]
+        return row
 
     def bbox_from_centroid(centroid):
         bbox, c = [], np.array(centroid.copy()).reshape(10,10,2)
@@ -72,40 +74,77 @@ def get_res(img):
         cls = DBSCAN(eps=t/100, min_samples=1).fit(np.array(inter))
         centroid = []
         for i in np.unique(cls.labels_):
-            idx = np.where(cls.labels_ == i)[0]
-            pt = [inter[i] for i in idx]
+            pt = [inter[i] for i in np.where(cls.labels_ == i)[0]]
             x,y = np.mean(np.array(pt)[:,0]).astype(int),np.mean(np.array(pt)[:,1]).astype(int)
             if all([x>=0,y>=0,x<=w, y<=h]):
                 centroid.append([x,y])
-        return centroid
+        return sort_centroid(centroid)
     
-    # Image processing
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    # thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY,11,2)
-    thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
+    def check_centroid_grid(row):
+        centroid = []
+        r = []
+        for c in row:
+            if len(c)>1:
+                d = np.diff(c, axis=0)
+                segdists = np.sqrt((d ** 2).sum(axis=1))
+                angle = np.array([atan2(c[i][1] - c[i-1][1],c[i][0] - c[i-1][0]) * 180 / np.pi for i in range(1,len(c))])
+                X = [(int(d),int(a)) for d,a in zip(segdists, angle)]
+                r.append(X)
+                centroid.append(c)
+            else:
+                r.append([(-1,-1)])
+            
+        return [i for s in centroid for i in s], np.array([i for s in r for i in s]).astype(int)
+    
+    def label_island(thresh, num):
+        label, _ = ndimage.label(thresh, np.ones((3,3)))
+        t = (img.shape[0]*img.shape[1]) / num
+        keep = [key for key,value in Counter(label.flatten()).items() if value > t and key!=0]
+        for i in keep:
+            label = np.where(label!=i, label, -1)
+        gray = np.where(label==-1, 0, 255).astype(np.uint8)
+        return gray, t
 
-    # Remove digits in the grid
-    label, _ = ndimage.label(thresh, np.ones((3,3)))
-    t = (img.shape[0]*img.shape[1]) / 100
+    def split_digits_grid(img):
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
 
-    keep = [key for key,value in Counter(label.flatten()).items() if value > t and key!=0]
-    for i in keep:
-        label = np.where(label!=i, label, -1)
-    gray = np.float32(np.where(label==-1, 0, 255))
-    grid = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB) / 255
+        # Remove digits in the grid
+        gray, t = label_island(thresh, 100)
+        grid = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB) / 255
 
+        # Remove grid and keep digits
+        digit = thresh.astype(bool).astype(np.uint8)
+        digit[np.invert(gray).astype(bool)] = 0
+        digit, _ = label_island(digit, 1250)
+        digit = cv2.cvtColor(digit, cv2.COLOR_GRAY2RGB)
+        
+        return grid, np.invert(gray), digit, t
+    
+    # Detect the grid in the image
+    grid, gray_grid, digit, t = split_digits_grid(img)
     # Detect points that form a line
-    gray = np.invert(np.uint8(gray))
-    lines = cv2.HoughLinesP(gray, rho=1.0, theta=np.pi/180, threshold=150, minLineLength=5, maxLineGap=10)
+    lines = cv2.HoughLinesP(gray_grid,
+                            rho=1.0,
+                            theta=np.pi/180,
+                            threshold=150,
+                            minLineLength=5,
+                            maxLineGap=50)
+    
+    # Filter lines by angular offset
+    angle = np.array([abs(atan2(y2-y1,x2-x1) * 180 / np.pi) for (x1,y1,x2,y2) in np.squeeze(lines)])
+    lines = lines[[i<10 or (i > 80 and i < 100) for i in angle]]
 
     # Find intersections & centroids & bboxes
     inter = find_intersections(lines)
-    centroid = find_centroid_from_lines(inter, t, *gray.shape)
-    centroid = sort_centroid(centroid)
+    row = find_centroid_from_lines(inter, t, *img.shape[:2])
+    centroid, r = check_centroid_grid(row)
+
     if len(centroid)==100:
         bbox = bbox_from_centroid(centroid)
     else:
         bbox = []
+    
     # Draw results on the image
     img_res = img.copy()
     for line in lines:
@@ -116,4 +155,4 @@ def get_res(img):
         img_res = cv2.circle(img_res, coord, 2, (0, 0, 255), -1)
         img_res = cv2.putText(img_res, f'{idx}',coord,cv2.FONT_HERSHEY_SIMPLEX,0.5,(0, 255, 0),1,cv2.LINE_4)
         
-    return centroid, (grid, img_res), bbox
+    return centroid, (grid, digit), bbox, r, img_res
