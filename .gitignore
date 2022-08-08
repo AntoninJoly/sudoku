@@ -1,7 +1,5 @@
 
 *.ipynb_checkpoints
 *.json
-__pycache__/
-*.png
 *.pyc
-src/inference/__pycache__/utils.cpython-37.pyc
+data/*
