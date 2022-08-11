@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile
 import uvicorn
 import warnings
 warnings.filterwarnings('ignore')
@@ -13,7 +13,8 @@ import logging
 logging.getLogger('matplotlib.font_manager').disabled = True
 from typing import Union, Dict, List
 from pydantic import BaseModel
-import io
+from PIL import Image
+from io import BytesIO
 from starlette.responses import StreamingResponse
 
 logging.basicConfig(filename="event.log",
@@ -29,6 +30,11 @@ class errorMsg(Exception):
     def __str__(self):
         return self.message
 
+class JSONClass(BaseModel):
+    size: Union[int,int,int]
+    path: str
+    img: str
+
 app = FastAPI()
 
 try:
@@ -40,16 +46,10 @@ except Exception as e:
     logger.error(f'{m}, msg={e}\n########')
     raise(errorMsg(m))
 
-json_dict = json.load(open('../test.json'))
-
-def main(json_dict):
+def main(img):
 
     img_size_grid = (512,512)
     img_size_digit = (28,28)
-    logger.info('Start')
-    img = np.fromstring(base64.b64decode(json_dict['img']), np.uint8)
-    img = img.reshape(*json_dict['size'])
-    logger.info('Could read json file')
 
     try:
         img_in = pad_resize_img(img, img_size_grid)
@@ -59,7 +59,7 @@ def main(json_dict):
         raise(errorMsg(m))
 
     try:
-        pred = inference_grid(grid_model, img_in)
+        pred = inference_grid(grid_model, img_in.copy()[:,:,[2,1,0]])
         mask = select_main_grid(pred)
 
         green = np.zeros(img_in.shape)
@@ -73,7 +73,7 @@ def main(json_dict):
         raise(errorMsg(m))
     
     try:
-        (vis_corner, warp, warp_box), corner_warp = find_corners_harris(img_in, mask)
+        (vis_corner, warp, warp_box), corner_warp, h = find_corners_harris(img_in, mask)
         titles = ['Contouring and corners','Homography', 'Grid ROI']
         vis_homography = visualize_results(vis_corner, warp, warp_box, titles)
     except Exception as e:
@@ -91,29 +91,76 @@ def main(json_dict):
         raise(errorMsg(m))
 
     try:
-        vis_pred, sudoku_array = grid_digits_processing(digit_model, digit_vis, bbox)
+        img_tile, grid_solve = grid_digits_processing(digit_model, digit_vis, bbox)
     except Exception as e:
         m = 'Cannot process digits in grid'
         logger.error(f'{m}, msg={e}\n########')
         raise(errorMsg(m))
 
-    return vis_segm, vis_homography, vis_grid, vis_pred, sudoku_array
+    try:
+        vis_pred, zeros = solve_sudoku(img_tile, grid_solve)
+    except Exception as e:
+        m = 'Cannot solve the sudoku'
+        logger.error(f'{m}, msg={e}\n########')
+        raise(errorMsg(m))
 
-class JSONClass(BaseModel):
-    size: Union[int,int,int]
-    path: str
-    img: str
+    try:
+        vis_res = revert_to_original(grid_solve, zeros, bbox, warp_box, h)
+    except Exception as e:
+        m = 'Cannot solve the sudoku'
+        logger.error(f'{m}, msg={e}\n########')
+        raise(errorMsg(m))
+
+    return vis_segm, vis_homography, vis_grid, vis_pred, vis_res
+
+def revert_to_original(grid_solve, zeros, bbox, img, h):
+    val = grid_solve[zeros].reshape(-1)
+    box = np.array(bbox)[zeros.reshape(-1)]
+
+    for v, b in zip(val, box):
+        x0, x1, y0, y1 = b
+        x,y = x0+6,y0+23
+        img = cv2.putText(img, f'{v}', (x,y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 1, cv2.LINE_4)
+
+    top = left = int(np.ceil((512 - img.shape[0])/2))
+    bot = right = int(np.floor((512 - img.shape[0])/2))
+    img = cv2.copyMakeBorder(img, top, bot, left, right, cv2.BORDER_CONSTANT, None, value = (0,0,0))
+    
+    h_inv = np.linalg.inv(h)
+    img = cv2.warpPerspective(img, h_inv, (512,512))
+
+    # img = cv2.perspectiveTransform(img, h_inv)
+    cv2.imwrite('test.png', img)
+    return []
+
+
+def load_image(data, ext):
+    if ext in ['.png','.jpeg','.jpg']:
+        img = np.array(Image.open(BytesIO(data)))[:,:,[0,1,2]]
+    elif ext == '.json':
+        json_dict = json.loads(data.decode('utf-8'))
+        img = np.fromstring(base64.b64decode(json_dict['img']), np.uint8)
+        img = img.reshape(*json_dict['size'])
+    return img.astype(np.uint8)
 
 @app.get("/")
 async def root():
     return {"Uvicorn": "I'm alive"}
 
 @app.post("/process/")
-async def process_image():
-    segm, homo, grid, pred, sudoku_array = main(json_dict)
-    vis = concatenate_visualization(segm, homo, grid, pred)
-    res, img_png = cv2.imencode(".png", vis)
-    return StreamingResponse(io.BytesIO(img_png.tobytes()), media_type="image/png")
+async def process_image(data: UploadFile):
+    _ , ext = os.path.splitext(data.filename)
+    img = load_image(await data.read(), ext)
+    segm, homo, grid, pred, res = main(img)
+    vis  = concatenate_visualization(segm, homo, grid, pred)
+    _, img_png = cv2.imencode(".png", vis)
+    return StreamingResponse(BytesIO(img_png.tobytes()), media_type="image/png")
+
+# @app.get("/solve/")
+# async def solve_sudoku(sudoku_array):
+
+#     res = solve(sudoku_array)
+#     return res
 
 # if __name__ == '__main__':
 #     uvicorn.run(app, host='127.0.0.1', port=8000)

@@ -112,7 +112,7 @@ def warp_grid(img, pts):
                   (400-100+2*offset,400-100+2*offset),
                   (offset, 400-100+2*offset)]
     
-    return dst, (x0,x1,y0,y1), corner_new
+    return (x0,x1,y0,y1), dst, corner_new, h
 
 def find_corners_harris(img_in, mask):
     cnt, hierarchy = cv2.findContours(np.expand_dims(mask.copy(), axis=-1).astype(np.uint8),
@@ -131,9 +131,9 @@ def find_corners_harris(img_in, mask):
     for i in centroids:
         corner = cv2.circle(corner, (i[0], i[1]), 3, (255,0,0), 3)
     
-    warp, (x0,x1,y0,y1), warped_corner = warp_grid(img_in.copy(), np.array(centroids))
+    (x0,x1,y0,y1), warp, warped_corner, h = warp_grid(img_in.copy(), np.array(centroids))
 
-    return (corner, warp, warp[y0:y1,x0:x1]), warped_corner
+    return (corner, warp, warp[y0:y1,x0:x1]), warped_corner, h
 
 def pad_resize_img(img, img_size):
     h,w,_ = img.shape
@@ -179,11 +179,17 @@ def find_intersections(lines):
         inter.append(intersect(p1,p2,p3,p4))
     return [i for i in inter if i!=[0,0]]
 
-def sort_centroid(c):
+def sort_centroid_x(c, thresh):
     c = sorted(c , key=lambda k: k[1])
-    x = [-1]+list(np.where(np.diff(np.array(c)[:,1])>5)[0])+[len(c)]
+    x = [-1]+list(np.where(np.diff(np.array(c)[:,1])>thresh)[0])+[len(c)]
     row = [sorted(c[x[idx]+1:x[idx+1]+1], key=lambda k: k[0]) for idx in range(len(x)-1)]
     return row
+
+def sort_centroid_y(c, thresh):
+    c = sorted(c , key=lambda k: k[0])
+    y = [-1]+list(np.where(np.diff(np.array(c)[:,0])>thresh)[0])+[len(c)]
+    col = [sorted(c[y[idx]+1:y[idx+1]+1], key=lambda k: k[1]) for idx in range(len(y)-1)]
+    return col
 
 def bbox_from_centroid(centroid):
     bbox, c = [], np.array(centroid.copy()).reshape(10,10,2)
@@ -200,23 +206,33 @@ def find_centroid_from_lines(inter, t, h, w):
         x,y = np.mean(np.array(pt)[:,0]).astype(int),np.mean(np.array(pt)[:,1]).astype(int)
         if all([x>=0,y>=0,x<=w, y<=h]):
             centroid.append([x,y])
-    return sort_centroid(centroid)
+    return centroid
 
-def check_centroid_grid(row):
+def check_centroid_grid(pts):
+
+    row = sort_centroid_x(pts, 5)
+    mean_x, mean_y = [], []
     centroid = []
-    r = []
-    for c in row:
+
+    for r in row:
+        if len(r)>1:
+            segdists = np.sqrt((np.diff(r, axis=0) ** 2).sum(axis=1))
+            # angle = np.array([atan2(r[i][1] - r[i-1][1],r[i][0] - r[i-1][0]) * 180 / np.pi for i in range(1,len(r))])
+            mean_x.append(np.mean(segdists))
+            centroid.append(r)
+    col = sort_centroid_y([i for s in centroid for i in s], 5)
+    
+    centroid = []
+    for c in col:
         if len(c)>1:
-            d = np.diff(c, axis=0)
-            segdists = np.sqrt((d ** 2).sum(axis=1))
-            angle = np.array([atan2(c[i][1] - c[i-1][1],c[i][0] - c[i-1][0]) * 180 / np.pi for i in range(1,len(c))])
-            X = [(int(d),int(a)) for d,a in zip(segdists, angle)]
-            r.append(X)
+            segdists = np.sqrt((np.diff(r, axis=0) ** 2).sum(axis=1))
+            mean_y.append(np.mean(segdists))
             centroid.append(c)
-        else:
-            r.append([(-1,-1)])
-        
-    return [i for s in centroid for i in s], np.array([i for s in r for i in s]).astype(int)
+    
+    centroid = sort_centroid_x([i for s in centroid for i in s], 5)
+
+    return [i for s in centroid for i in s], []
+    # return [i for s in centroid for i in s], np.array([i for s in r for i in s]).astype(int)
 
 def label_island(thresh, num):
     label, _ = ndimage.label(thresh, np.ones((3,3)))
@@ -260,8 +276,8 @@ def analyse_img(img):
 
     # Find intersections & centroids & bboxes
     inter = find_intersections(lines)
-    row = find_centroid_from_lines(inter, t, *img.shape[:2])
-    centroid, r = check_centroid_grid(row)
+    pts = find_centroid_from_lines(inter, t, *img.shape[:2])
+    centroid, r = check_centroid_grid(pts)
 
     if len(centroid)==100:
         bbox = bbox_from_centroid(centroid)
@@ -287,10 +303,13 @@ def visualize_results(img1, img2, img3, titles):
     fig = plt.figure(figsize=(20,10))
     plt.subplot(1,3,1)
     plt.imshow(img1)
+    plt.title(titles[0])
     plt.subplot(1,3,2)
     plt.imshow(img2)
+    plt.title(titles[1])
     plt.subplot(1,3,3)
     plt.imshow(img3)
+    plt.title(titles[2])
     plt.tight_layout()
 
     fig.canvas.draw()
@@ -303,7 +322,9 @@ def visualize_results(img1, img2, img3, titles):
 
 def grid_digits_processing(digit_model, digit_vis, bbox, sudoku_array = []):
     
-    fig = plt.figure(figsize=(20,20))
+    grid_solve = np.empty((81)).astype(int)
+    img_tile = np.zeros((81, 28, 28))
+
     for idx, box in enumerate(bbox):
         offset = 0
         x0, x1, y0, y1 = box
@@ -314,14 +335,73 @@ def grid_digits_processing(digit_model, digit_vis, bbox, sudoku_array = []):
         
         pred, confidence = inference_digit(digit_model, img_resize)
         l = pred if np.sum(gray)>100 else 0
-        sudoku_array.append(l)
+        grid_solve[idx] = l
+        img_tile[idx,:,:] = img_resize
+
+    return img_tile, grid_solve.reshape(9,9)
+
+def num_on_img(l):
+    img_solution = np.zeros((28,28,3))
+    if l!=0:
+        img_solution = cv2.putText(img_solution, f'{l}', (5,20), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, cv2.LINE_AA)
+    return cv2.cvtColor(img_solution.astype(np.uint8), cv2.COLOR_RGB2GRAY)
+
+def solve_sudoku(img_tile, grid_solve):
+    def isSafe(grid_solve, row, col, num):
+        for x in range(9):
+            if grid_solve[row][x] == num:
+                return False
+        for x in range(9):
+            if grid_solve[x][col] == num:
+                return False
+        startRow = row - row % 3
+        startCol = col - col % 3
+        for i in range(3):
+            for j in range(3):
+                if grid_solve[i + startRow][j + startCol] == num:
+                    return False
+        return True
+
+    def solve(grid_solve, row, col):
+        if (row == 9 - 1 and col == 9):
+            return True
+        if col == 9:
+            row += 1
+            col = 0
+        if grid_solve[row][col] > 0:
+            return solve(grid_solve, row, col + 1)
+        for num in range(1, 10):
+            if isSafe(grid_solve, row, col, num):
+                grid_solve[row][col] = num
+                if solve(grid_solve, row, col + 1):
+                    return True
+            grid_solve[row][col] = 0
+        return False
+
+    zeros = np.where(grid_solve==0, True, False)
+
+    if not (solve(grid_solve, 0, 0)):
+        print("Solution does not exist")        
+    
+    fig = plt.figure(figsize=(20,20))
+
+    for idx, (p,s) in enumerate(zip(grid_solve.reshape(-1), zeros.reshape(-1))):
+
         plt.subplot(9,9,idx+1)
-        plt.imshow(img_resize)
+        if s:
+            img = num_on_img(p)
+        else:
+            img = img_tile[idx]
+            t = f'Predicted - {p}'
+            plt.title(t, fontsize=15)
+        plt.imshow(img)
         plt.axis('off')
-        plt.title(f'prediction - {l}',fontsize=15)
     plt.tight_layout()
+    
     fig.canvas.draw()
     data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
     w, h = fig.canvas.get_width_height()
+    vis = data.reshape((int(h), int(w), -1))[:, :, [2, 1, 0]]
     plt.close()
-    return data.reshape((int(h), int(w), -1))[:, :, [2, 1, 0]], np.array(sudoku_array).reshape(9,9)
+
+    return vis, zeros
