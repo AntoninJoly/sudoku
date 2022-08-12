@@ -106,13 +106,8 @@ def warp_grid(img, pts):
     offset = 10
     x0,x1 = np.min(pts_dst[:,0]) - offset, np.max(pts_dst[:,0]) + offset
     y0,y1 = np.min(pts_dst[:,1]) - offset, np.max(pts_dst[:,1]) + offset
-    
-    corner_new = [(offset, offset),
-                  (400-100+2*offset, offset),
-                  (400-100+2*offset,400-100+2*offset),
-                  (offset, 400-100+2*offset)]
-    
-    return (x0,x1,y0,y1), dst, corner_new, h
+
+    return (x0,x1,y0,y1), dst, h
 
 def find_corners_harris(img_in, mask):
     cnt, hierarchy = cv2.findContours(np.expand_dims(mask.copy(), axis=-1).astype(np.uint8),
@@ -131,9 +126,8 @@ def find_corners_harris(img_in, mask):
     for i in centroids:
         corner = cv2.circle(corner, (i[0], i[1]), 3, (255,0,0), 3)
     
-    (x0,x1,y0,y1), warp, warped_corner, h = warp_grid(img_in.copy(), np.array(centroids))
-
-    return (corner, warp, warp[y0:y1,x0:x1]), warped_corner, h
+    (x0,x1,y0,y1), warp, h = warp_grid(img_in.copy(), np.array(centroids))
+    return (corner, warp, warp[y0:y1,x0:x1]), ([x0, y0], [x1,y1]), h
 
 def pad_resize_img(img, img_size):
     h,w,_ = img.shape
@@ -296,8 +290,11 @@ def analyse_img(img):
         
     return (grid, digit, img_res), bbox
 
-def concatenate_visualization(segm, homo, grid, pred):
-    return np.concatenate((segm, homo, grid, pred), axis=0)
+def concatenate_visualization(segm, homo, grid, pred, res):
+    res = cv2.resize(res, (1500,1500))
+    left, right = int(np.floor((2000-1500)/2)), int(np.ceil((2000-1500)/2))
+    res = cv2.copyMakeBorder(res,0,0,left, right,cv2.BORDER_CONSTANT, None, value = (255,255,255))
+    return np.concatenate((segm, homo, grid, pred, res), axis=0)
 
 def visualize_results(img1, img2, img3, titles):
     fig = plt.figure(figsize=(20,10))
@@ -405,3 +402,21 @@ def solve_sudoku(img_tile, grid_solve):
     plt.close()
 
     return vis, zeros
+
+def revert_to_original(grid_solve, zeros, bbox, img, box_warp, h):
+    val = grid_solve[zeros].reshape(-1)
+    box = np.array(bbox)[zeros.reshape(-1)]
+
+    for v, b in zip(val, box):
+        x0, x1, y0, y1 = b
+        x,y = x0+6,y0+22
+        label = v if v != 0 else '?'
+        img = cv2.putText(img, f'{label}', (x,y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 0, 0), 1, cv2.LINE_4)
+    ([left,top],[x1,y1]) = box_warp
+    bot, right = 512 - y1, 512 - x1
+    img = cv2.copyMakeBorder(img, top, bot, left, right, cv2.BORDER_CONSTANT, None, value = (0,0,0))
+    
+    h_inv = np.linalg.inv(h)
+    img = cv2.warpPerspective(img, h_inv, (512,512))
+
+    return img

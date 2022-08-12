@@ -7628,3 +7628,1031 @@ main.errorMsg: Cannot solve the sudoku
 [18:22:42] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
 [18:22:42] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
 [18:22:42] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[20:25:42] {server.py:75} INFO - Started server process [7928]
+[20:25:42] {on.py:47} INFO - Waiting for application startup.
+[20:25:42] {on.py:61} INFO - Application startup complete.
+[20:32:15] {server.py:75} INFO - Started server process [7572]
+[20:32:15] {on.py:47} INFO - Waiting for application startup.
+[20:32:15] {on.py:61} INFO - Application startup complete.
+[20:36:43] {server.py:75} INFO - Started server process [6548]
+[20:36:43] {on.py:47} INFO - Waiting for application startup.
+[20:36:43] {on.py:61} INFO - Application startup complete.
+[20:38:03] {server.py:75} INFO - Started server process [1272]
+[20:38:03] {on.py:47} INFO - Waiting for application startup.
+[20:38:03] {on.py:61} INFO - Application startup complete.
+[20:40:58] {server.py:75} INFO - Started server process [14868]
+[20:40:58] {on.py:47} INFO - Waiting for application startup.
+[20:40:58] {on.py:61} INFO - Application startup complete.
+[20:41:18] {server.py:75} INFO - Started server process [12408]
+[20:41:18] {on.py:47} INFO - Waiting for application startup.
+[20:41:18] {on.py:61} INFO - Application startup complete.
+[21:05:25] {server.py:75} INFO - Started server process [1064]
+[21:05:25] {on.py:47} INFO - Waiting for application startup.
+[21:05:25] {on.py:61} INFO - Application startup complete.
+[21:06:20] {server.py:75} INFO - Started server process [7300]
+[21:06:20] {on.py:47} INFO - Waiting for application startup.
+[21:06:20] {on.py:61} INFO - Application startup complete.
+[21:07:20] {server.py:75} INFO - Started server process [11380]
+[21:07:20] {on.py:47} INFO - Waiting for application startup.
+[21:07:20] {on.py:61} INFO - Application startup complete.
+[21:07:23] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:07:23] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:07:23] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:07:23] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:07:23] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:07:23] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[140:8434]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[8435:86846]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[86847:98284]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[98285:98304]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:119760]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[119761:164383]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[164384:262144]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:166127]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[166128:227173]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[227174:241042]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[241043:262144]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:66575]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[66576:102908]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[102909:177497]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[177498:183647]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[183648:262117]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[262118:262144]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:44299]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:07:23] {multipart.py:601} DEBUG - Calling on_part_data with data[44300:249502]
+[21:07:23] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:07:23] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:07:23] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:07:23] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:07:23] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:07:23] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:07:23] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:10:08] {server.py:75} INFO - Started server process [14408]
+[21:10:08] {on.py:47} INFO - Waiting for application startup.
+[21:10:08] {on.py:61} INFO - Application startup complete.
+[21:10:10] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:10:10] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:10:10] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:10:10] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:10:10] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:10:10] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[140:23262]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[23263:262144]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:72362]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[72363:109664]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[109665:262144]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:77202]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[77203:113146]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[113147:114688]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:221279]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[221280:246175]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[246176:262144]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:61290]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[61291:200281]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[200282:218535]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:10:10] {multipart.py:601} DEBUG - Calling on_part_data with data[218536:233118]
+[21:10:10] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:10:10] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:10:10] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:10:10] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:10:10] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:10:10] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:10:10] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:11:13] {server.py:75} INFO - Started server process [15100]
+[21:11:13] {on.py:47} INFO - Waiting for application startup.
+[21:11:13] {on.py:61} INFO - Application startup complete.
+[21:11:19] {server.py:75} INFO - Started server process [10608]
+[21:11:19] {on.py:47} INFO - Waiting for application startup.
+[21:11:19] {on.py:61} INFO - Application startup complete.
+[21:12:23] {server.py:75} INFO - Started server process [10044]
+[21:12:23] {on.py:47} INFO - Waiting for application startup.
+[21:12:23] {on.py:61} INFO - Application startup complete.
+[21:12:23] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:12:23] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:12:23] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:12:23] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:12:23] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:12:23] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[140:82274]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[82275:168249]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[168250:189545]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[189546:246992]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[246993:261418]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:144936]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[144937:241125]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[241126:262144]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:34324]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[34325:230447]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[230448:262144]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:143329]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[143330:262144]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:4252]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[4253:86358]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:12:23] {multipart.py:601} DEBUG - Calling on_part_data with data[86359:86388]
+[21:12:23] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:12:23] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:12:23] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:12:23] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:12:23] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:12:23] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:12:23] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:12:52] {server.py:75} INFO - Started server process [13348]
+[21:12:52] {on.py:47} INFO - Waiting for application startup.
+[21:12:52] {on.py:61} INFO - Application startup complete.
+[21:15:09] {server.py:75} INFO - Started server process [14480]
+[21:15:09] {on.py:47} INFO - Waiting for application startup.
+[21:15:09] {on.py:61} INFO - Application startup complete.
+[21:15:12] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:15:12] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:15:12] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:15:12] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:15:12] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:15:12] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[140:82345]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[82346:86846]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[86847:98284]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[98285:98304]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:69945]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[69946:144275]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[144276:183074]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[183075:196608]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:79268]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[79269:95058]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[95059:102512]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[102513:236401]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[236402:262144]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:63994]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[63995:80046]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[80047:102567]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[102568:161470]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[161471:262144]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:257638]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[257639:262106]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[262107:262144]
+[21:15:12] {multipart.py:601} DEBUG - Calling on_part_data with data[0:36510]
+[21:15:12] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:15:12] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:15:12] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:15:12] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:15:12] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:15:12] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:15:12] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:15:18] {h11_impl.py:406} ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\PAC\miniconda3\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\main.py", line 137, in process_image
+    vis  = concatenate_visualization(segm, homo, grid, pred, res)
+  File ".\utils.py", line 296, in concatenate_visualization
+    return np.concatenate((segm, homo, grid, pred, res), axis=0)
+  File "<__array_function__ internals>", line 6, in concatenate
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 2000 and the array at index 4 has size 1000
+[21:15:39] {server.py:75} INFO - Started server process [4812]
+[21:15:39] {on.py:47} INFO - Waiting for application startup.
+[21:15:39] {on.py:61} INFO - Application startup complete.
+[21:15:39] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:15:39] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:15:39] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:15:39] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:15:39] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:15:39] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[140:136081]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[136082:153298]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[153299:183260]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[183261:261418]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:39803]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[39804:132757]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[132758:184277]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[184278:210178]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[210179:214270]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[214271:235835]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[235836:262144]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:113872]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[113873:262144]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:25244]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[25245:99445]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[99446:117870]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[117871:145094]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[145095:262144]
+[21:15:39] {multipart.py:601} DEBUG - Calling on_part_data with data[0:86388]
+[21:15:39] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:15:39] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:15:39] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:15:39] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:15:39] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:15:39] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:15:39] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:15:46] {h11_impl.py:406} ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\PAC\miniconda3\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\main.py", line 137, in process_image
+    vis  = concatenate_visualization(segm, homo, grid, pred, res)
+  File ".\utils.py", line 297, in concatenate_visualization
+    return np.concatenate((segm, homo, grid, pred, res), axis=0)
+  File "<__array_function__ internals>", line 6, in concatenate
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 2000 and the array at index 4 has size 1000
+[21:16:05] {server.py:75} INFO - Started server process [11932]
+[21:16:05] {on.py:47} INFO - Waiting for application startup.
+[21:16:05] {on.py:61} INFO - Application startup complete.
+[21:16:05] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:16:05] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:16:05] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:16:05] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:16:05] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:16:05] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[140:8434]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[8435:135995]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[135996:136081]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[136082:151409]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[151410:218064]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[218065:261418]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:75376]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[75377:119083]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[119084:262144]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:79263]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[79264:96325]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[96326:111501]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[111502:190198]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[190199:262144]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:32693]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[32694:223352]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[223353:262144]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:71805]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:16:05] {multipart.py:601} DEBUG - Calling on_part_data with data[71806:86388]
+[21:16:05] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:16:05] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:16:05] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:16:05] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:16:05] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:16:05] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:16:05] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:17:21] {server.py:75} INFO - Started server process [9020]
+[21:17:21] {on.py:47} INFO - Waiting for application startup.
+[21:17:21] {on.py:61} INFO - Application startup complete.
+[21:17:21] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:17:21] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:17:21] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:17:21] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:17:21] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:17:21] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[140:169857]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[169858:261418]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:257275]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[257276:262144]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:213085]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[213086:221929]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:2]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[221931:262144]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:127574]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[127575:262144]
+[21:17:21] {multipart.py:601} DEBUG - Calling on_part_data with data[0:86388]
+[21:17:21] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:17:21] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:17:21] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:17:21] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:17:21] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:17:21] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:17:21] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:18:47] {server.py:75} INFO - Started server process [3688]
+[21:18:47] {on.py:47} INFO - Waiting for application startup.
+[21:18:47] {on.py:61} INFO - Application startup complete.
+[21:18:47] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:18:47] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:18:47] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:18:47] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:18:47] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:18:47] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[140:77198]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[77199:86846]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[86847:183260]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[183261:213067]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[213068:261418]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:75645]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[75646:122937]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[122938:225042]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[225043:262144]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:112333]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[112334:141402]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[141403:230154]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[230155:262144]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:262144]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:43643]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[43644:83754]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:18:47] {multipart.py:601} DEBUG - Calling on_part_data with data[83755:86388]
+[21:18:47] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:18:47] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:18:47] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:18:47] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:18:47] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:18:47] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:18:47] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:18:54] {h11_impl.py:406} ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\PAC\miniconda3\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\routing.py", line 228, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "C:\Users\PAC\miniconda3\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File ".\main.py", line 137, in process_image
+    vis  = concatenate_visualization(segm, homo, grid, pred, res)
+  File ".\utils.py", line 294, in concatenate_visualization
+    res = cv2.resize(img, (1500,1500))
+NameError: name 'img' is not defined
+[21:19:07] {server.py:75} INFO - Started server process [11764]
+[21:19:07] {on.py:47} INFO - Waiting for application startup.
+[21:19:07] {on.py:61} INFO - Application startup complete.
+[21:19:07] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:19:07] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:19:07] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:19:07] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:19:07] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:19:07] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[140:77198]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[77199:261418]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:18446]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[18447:19960]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[19961:119471]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[119472:122043]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[122044:190380]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[190381:210637]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[210638:262144]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:95773]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[95774:262144]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:75869]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[75870:98753]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[98754:105021]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[105022:117870]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[117871:223348]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[223349:262144]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:81155]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:07] {multipart.py:601} DEBUG - Calling on_part_data with data[81156:86388]
+[21:19:07] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:19:07] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:19:07] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:19:07] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[21:19:07] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[21:19:07] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[21:19:07] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[21:19:50] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:19:50] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:19:50] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:19:50] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:19:50] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:19:50] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[140:16384]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:10690]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[10691:16384]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:81920]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:65030]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[65031:81920]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:42826]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[42827:131072]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:55084]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[55085:71877]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[71878:147456]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:22455]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[22456:83817]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[83818:180224]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:32073]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:19:50] {multipart.py:601} DEBUG - Calling on_part_data with data[32074:193011]
+[21:19:50] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:19:50] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:19:50] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:19:50] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 9309
+[21:19:50] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 9362 2421
+[21:19:50] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 11795 9
+[21:19:50] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 11816 8192
+[21:20:15] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:20:15] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[21:20:15] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:20:15] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[21:20:15] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:20:15] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[140:16384]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:38971]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[38972:49152]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:65536]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:17353]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[17354:51273]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[51274:81920]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:65536]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:81920]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:147456]
+[21:20:15] {multipart.py:601} DEBUG - Calling on_part_data with data[0:59086]
+[21:20:15] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:20:15] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:20:15] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:20:15] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 9048
+[21:20:15] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 9101 2421
+[21:20:15] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 11534 9
+[21:20:15] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 11555 8192
+[21:20:46] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:20:46] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_header_value with data[63:109]
+[21:20:46] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:20:46] {multipart.py:601} DEBUG - Calling on_header_field with data[111:123]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_header_value with data[125:134]
+[21:20:46] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:20:46] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[138:16384]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:81920]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:26505]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[26506:34807]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[34808:114688]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:64185]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[64186:147456]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:36353]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[36354:43431]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[43432:113681]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[113682:212992]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:104336]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[104337:111540]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[111541:210023]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[210024:262144]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:44164]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[44165:111301]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[111302:126686]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[126687:214640]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[214641:257582]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[257583:262144]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:22925]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[22926:75428]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[75429:113072]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[113073:135365]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[135366:262144]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:156528]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[156529:262144]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:5214]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[5215:44677]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[44678:91423]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[91424:178883]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[178885:190761]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[190762:262144]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:174549]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[174550:262144]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:262144]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:17946]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[17947:77225]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[77226:106007]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[106008:112954]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[112955:118054]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[118055:123068]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[123069:132256]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[132257:161439]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:20:46] {multipart.py:601} DEBUG - Calling on_part_data with data[161440:205239]
+[21:20:46] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:20:46] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:20:46] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:20:46] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 9486
+[21:20:46] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 9539 2421
+[21:20:46] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 11972 9
+[21:20:46] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 11993 8192
+[21:22:16] {server.py:75} INFO - Started server process [12164]
+[21:22:16] {on.py:47} INFO - Waiting for application startup.
+[21:22:16] {on.py:61} INFO - Application startup complete.
+[21:22:19] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:22:19] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_header_value with data[63:109]
+[21:22:19] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:22:19] {multipart.py:601} DEBUG - Calling on_header_field with data[111:123]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_header_value with data[125:134]
+[21:22:19] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:22:19] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[138:61790]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[61791:74259]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[74260:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:157013]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[157014:253610]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[253611:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:120761]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[120762:129812]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[129813:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:43714]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[43715:98047]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[98048:108662]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[108663:254038]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[254039:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:67332]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[67333:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:53071]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[53072:123892]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[123893:227405]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[227406:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:120316]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[120317:186094]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[186095:188574]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[188575:262142]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[262143:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:174103]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[174104:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:262126]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[262127:262144]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:169166]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[169167:254373]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:22:19] {multipart.py:601} DEBUG - Calling on_part_data with data[254374:254391]
+[21:22:19] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:22:19] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:22:19] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:22:19] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 9486
+[21:22:19] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 9539 2421
+[21:22:19] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 11972 9
+[21:22:19] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 11993 8192
+[21:23:12] {server.py:75} INFO - Started server process [7532]
+[21:23:12] {on.py:47} INFO - Waiting for application startup.
+[21:23:12] {on.py:61} INFO - Application startup complete.
+[21:23:42] {server.py:75} INFO - Started server process [5108]
+[21:23:42] {on.py:47} INFO - Waiting for application startup.
+[21:23:42] {on.py:61} INFO - Application startup complete.
+[21:24:35] {server.py:75} INFO - Started server process [9088]
+[21:24:35] {on.py:47} INFO - Waiting for application startup.
+[21:24:35] {on.py:61} INFO - Application startup complete.
+[21:24:38] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:24:38] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_header_value with data[63:109]
+[21:24:38] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:24:38] {multipart.py:601} DEBUG - Calling on_header_field with data[111:123]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_header_value with data[125:134]
+[21:24:38] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:24:38] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[138:61790]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[61791:72949]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[72950:144631]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[144632:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:6232]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[6233:49152]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:8927]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[8928:16384]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:6315]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[6316:16384]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:37339]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[37340:94179]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[94180:180224]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:56907]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[56908:87993]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[87994:239990]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[239991:251822]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[251823:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:50318]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[50319:89754]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[89755:124695]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[124696:143070]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[143071:152558]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[152559:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:29805]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[29806:34564]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[34565:163332]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[163333:184665]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[184666:238266]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[238267:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:20303]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[20304:97083]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[97084:148009]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[148010:172912]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[172913:195536]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[195537:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:61061]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[61062:127845]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[127846:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:107756]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[107757:116137]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[116138:120351]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[120352:225460]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[225461:243501]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[243502:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:46733]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[46734:88388]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[88389:221693]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[221694:262144]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:34330]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[34331:34629]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[34630:41716]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[41717:122391]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:24:38] {multipart.py:601} DEBUG - Calling on_part_data with data[122392:221623]
+[21:24:38] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:24:38] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:24:38] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:24:38] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 9486
+[21:24:38] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 9539 2421
+[21:24:38] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 11972 9
+[21:24:38] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 11993 8192
+[21:25:28] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:25:28] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_header_value with data[63:109]
+[21:25:28] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:25:28] {multipart.py:601} DEBUG - Calling on_header_field with data[111:123]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_header_value with data[125:134]
+[21:25:28] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:25:28] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[138:16384]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:24190]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[24191:81920]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:32768]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:49152]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:35713]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[35714:51130]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[51131:65536]
+[21:25:28] {multipart.py:601} DEBUG - Calling on_part_data with data[0:80316]
+[21:25:28] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:25:28] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:25:28] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:25:28] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 6119
+[21:25:28] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 6172 9
+[21:25:28] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 6193 8192
+[21:25:54] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[21:25:54] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_header_value with data[63:109]
+[21:25:54] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:25:54] {multipart.py:601} DEBUG - Calling on_header_field with data[111:123]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_header_value with data[125:134]
+[21:25:54] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[21:25:54] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[138:6537]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[6538:16384]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16384]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:16350]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[16351:16384]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:49152]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:32757]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[32758:32768]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:81920]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:5949]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[5950:108861]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[108862:147456]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:718]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[719:184016]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[184017:262144]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:2398]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[2399:168068]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[168069:262144]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:547]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[548:146299]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[146300:170545]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[170546:234129]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[234130:262144]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:65367]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[65368:78595]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[78596:87991]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[87992:196143]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[21:25:54] {multipart.py:601} DEBUG - Calling on_part_data with data[196144:218151]
+[21:25:54] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[21:25:54] {multipart.py:604} DEBUG - Calling on_end with no data
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11500
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'iCCP' 11553 2615
+[21:25:54] {PngImagePlugin.py:391} DEBUG - iCCP profile name b'sRGB IEC61966-2.1'
+[21:25:54] {PngImagePlugin.py:392} DEBUG - Compression method 0
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'gAMA' 14180 4
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'iCCP' 14196 2615
+[21:25:54] {PngImagePlugin.py:391} DEBUG - iCCP profile name b'sRGB IEC61966-2.1'
+[21:25:54] {PngImagePlugin.py:392} DEBUG - Compression method 0
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'cHRM' 16823 32
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 16867 9
+[21:25:54] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 16888 8192

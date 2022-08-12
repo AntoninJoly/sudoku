@@ -64,14 +64,8 @@ def warp_grid(img, pts):
     offset = 10
     x0,x1 = np.min(pts_dst[:,0]) - offset, np.max(pts_dst[:,0]) + offset
     y0,y1 = np.min(pts_dst[:,1]) - offset, np.max(pts_dst[:,1]) + offset
-    
-    corner_new = [(offset, offset),
-                  (400-100+2*offset, offset),
-                  (400-100+2*offset,400-100+2*offset),
-                  (offset, 400-100+2*offset)]
-    
-    return dst, (x0,x1,y0,y1), corner_new
 
+    return (x0,x1,y0,y1), dst, h
 
 def find_corners_harris(img_in, mask):
     cnt, hierarchy = cv2.findContours(np.expand_dims(mask.copy(), axis=-1).astype(np.uint8),
@@ -90,9 +84,8 @@ def find_corners_harris(img_in, mask):
     for i in centroids:
         corner = cv2.circle(corner, (i[0], i[1]), 3, (255,0,0), 3)
     
-    warp, (x0,x1,y0,y1), warped_corner = warp_grid(img_in.copy(), np.array(centroids))
-
-    return (corner, warp, warp[y0:y1,x0:x1]), warped_corner
+    (x0,x1,y0,y1), warp, h = warp_grid(img_in.copy(), np.array(centroids))
+    return (corner, warp, warp[y0:y1,x0:x1]), ([x0, y0], [x1,y1]), h
 
 def pad_resize_img(img, img_size):
     h,w,_ = img.shape

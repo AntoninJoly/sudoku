@@ -73,7 +73,7 @@ def main(img):
         raise(errorMsg(m))
     
     try:
-        (vis_corner, warp, warp_box), corner_warp, h = find_corners_harris(img_in, mask)
+        (vis_corner, warp, warp_box), box_warp, h = find_corners_harris(img_in, mask)
         titles = ['Contouring and corners','Homography', 'Grid ROI']
         vis_homography = visualize_results(vis_corner, warp, warp_box, titles)
     except Exception as e:
@@ -105,34 +105,16 @@ def main(img):
         raise(errorMsg(m))
 
     try:
-        vis_res = revert_to_original(grid_solve, zeros, bbox, warp_box, h)
+        res = revert_to_original(grid_solve, zeros, bbox, warp_box, box_warp, h)
+        img_in[mask.astype(bool)] = 0
+        res[~mask.astype(bool)] = 0
+        vis_res = cv2.bitwise_or(img_in.astype(np.uint8), res.astype(np.uint8))[:,:,[2,1,0]]
     except Exception as e:
         m = 'Cannot solve the sudoku'
         logger.error(f'{m}, msg={e}\n########')
         raise(errorMsg(m))
 
     return vis_segm, vis_homography, vis_grid, vis_pred, vis_res
-
-def revert_to_original(grid_solve, zeros, bbox, img, h):
-    val = grid_solve[zeros].reshape(-1)
-    box = np.array(bbox)[zeros.reshape(-1)]
-
-    for v, b in zip(val, box):
-        x0, x1, y0, y1 = b
-        x,y = x0+6,y0+23
-        img = cv2.putText(img, f'{v}', (x,y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 1, cv2.LINE_4)
-
-    top = left = int(np.ceil((512 - img.shape[0])/2))
-    bot = right = int(np.floor((512 - img.shape[0])/2))
-    img = cv2.copyMakeBorder(img, top, bot, left, right, cv2.BORDER_CONSTANT, None, value = (0,0,0))
-    
-    h_inv = np.linalg.inv(h)
-    img = cv2.warpPerspective(img, h_inv, (512,512))
-
-    # img = cv2.perspectiveTransform(img, h_inv)
-    cv2.imwrite('test.png', img)
-    return []
-
 
 def load_image(data, ext):
     if ext in ['.png','.jpeg','.jpg']:
@@ -152,15 +134,9 @@ async def process_image(data: UploadFile):
     _ , ext = os.path.splitext(data.filename)
     img = load_image(await data.read(), ext)
     segm, homo, grid, pred, res = main(img)
-    vis  = concatenate_visualization(segm, homo, grid, pred)
+    vis  = concatenate_visualization(segm, homo, grid, pred, res)
     _, img_png = cv2.imencode(".png", vis)
     return StreamingResponse(BytesIO(img_png.tobytes()), media_type="image/png")
-
-# @app.get("/solve/")
-# async def solve_sudoku(sudoku_array):
-
-#     res = solve(sudoku_array)
-#     return res
 
 # if __name__ == '__main__':
 #     uvicorn.run(app, host='127.0.0.1', port=8000)
