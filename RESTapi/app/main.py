@@ -105,9 +105,8 @@ def main(img):
         raise(errorMsg(m))
 
     try:
-        res = revert_to_original(grid_solve, zeros, bbox, warp_box, box_warp, h)
+        res, mask = revert_to_original(grid_solve, zeros, bbox, warp_box, box_warp, h)
         img_in[mask.astype(bool)] = 0
-        res[~mask.astype(bool)] = 0
         vis_res = cv2.bitwise_or(img_in.astype(np.uint8), res.astype(np.uint8))[:,:,[2,1,0]]
     except Exception as e:
         m = 'Cannot solve the sudoku'

@@ -419,5 +419,8 @@ def revert_to_original(grid_solve, zeros, bbox, img, box_warp, h):
     
     h_inv = np.linalg.inv(h)
     img = cv2.warpPerspective(img, h_inv, (512,512))
-
-    return img
+    mask = cv2.cvtColor(img.copy(), cv2.COLOR_RGB2GRAY)
+    mask[mask!=0]=1
+    mask = cv2.erode(mask, np.ones((5,5),np.uint8), iterations=1)
+    img[mask!=1] = 0
+    return img, mask
