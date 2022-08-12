@@ -239,8 +239,8 @@ def label_island(thresh, num):
 
 def split_digits_grid(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 11, 2)
-
+    thresh = cv2.adaptiveThreshold(gray, 255, 1, 1, 17, 4)
+    
     # Remove digits in the grid
     gray, t = label_island(thresh, 500)
     grid = cv2.cvtColor(gray, cv2.COLOR_GRAY2RGB) / 255
@@ -248,7 +248,8 @@ def split_digits_grid(img):
     # Remove grid and keep digits
     digit = thresh.astype(bool).astype(np.uint8)
     digit[np.invert(gray).astype(bool)] = 0
-    digit, _ = label_island(digit, 1250)
+    digit, _ = label_island(digit, 2000)
+
     digit = cv2.cvtColor(digit, cv2.COLOR_GRAY2RGB)
     
     return grid, np.invert(gray), digit, t
