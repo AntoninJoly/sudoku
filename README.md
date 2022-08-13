@@ -7,7 +7,9 @@ Interesting points of this hobby projects are:
 - Problem solving
 - Backtracking of solution in original point of view
 
-Digit classification model was trained using a mix of MNIST data and editor-made data (auto-generated) using a simple CNN model. Grid semantic segmentation was trained using handmade labelled data, which original images were taken from the net, using resnet50+unet like architecture.
+Digit classification model was trained using a mix of MNIST data and editor-made data (auto-generated) using a simple CNN model. Evaluation of this model achieved 0.9714 average f1-score on test data.
+
+Grid semantic segmentation was trained using handmade labelled data, which original images were taken from the net, using resnet50+unet like architecture. Evaluation of this model achieved IoU:0.9785 - Dice:0.9891 on test data.
 
 # Overview & example
 
