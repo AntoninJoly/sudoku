@@ -8,7 +8,6 @@ import sys
 import base64
 import json
 import codecs
-from utils import *
 import logging
 logging.getLogger('matplotlib.font_manager').disabled = True
 from typing import Union, Dict, List
@@ -17,11 +16,11 @@ from PIL import Image
 from io import BytesIO
 from starlette.responses import StreamingResponse
 
-sys.path.append('../../src')
+sys.path.append('../../src/')
 from utils import *
 import config as cfg
 
-logging.basicConfig(filename="../logs/event.log",
+logging.basicConfig(filename="../../logs/event_fastapi.log",
                     filemode='a',
                     format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s',
                     datefmt='%H:%M:%S',
@@ -42,8 +41,9 @@ class JSONClass(BaseModel):
 app = FastAPI()
 
 try:
-    digit_model = load_model(cfg.digit_model_path)
-    grid_model = load_model(cfg.grid_model_path)
+    model_dir = '../../models'
+    digit_model = load_model(os.path.join(model_dir, os.path.basename(cfg.digit_model_path)))
+    grid_model = load_model(os.path.join(model_dir, os.path.basename(cfg.grid_model_path)))
 except Exception as e:
     m = 'Cannot load models'
     logger.error(f'{m}, msg={e}\n########')

@@ -15,6 +15,11 @@ Grid semantic segmentation was trained using handmade labelled data, which origi
 
 # REST api using FastApi 📡
 
+Open a terminal in the api/app folder and type:
+```
+uvicorn main:app --reload
+```
+
 # Dockerization 📦
 
 # Overview & example 📈
@@ -23,5 +28,5 @@ Grid semantic segmentation was trained using handmade labelled data, which origi
 
 # To be done next 🛠
 Following steps are considered:
-[] Mobile app implementation
-[] Model quantization
+[ ] Mobile app implementation
+[ ] Model quantization

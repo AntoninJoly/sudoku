@@ -1,10 +1,11 @@
 import unittest
 import sys
+import numpy as np
 import warnings
 sys.path.append('../src')
 from utils import *
 import config as cfg
-import numpy as np
+
 
 class Test_SegmentationDataset(unittest.TestCase):
     @classmethod

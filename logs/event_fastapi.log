@@ -1,0 +1,64 @@
+[18:19:04] {server.py:75} INFO - Started server process [2476]
+[18:19:04] {on.py:47} INFO - Waiting for application startup.
+[18:19:04] {on.py:61} INFO - Application startup complete.
+[18:19:37] {multipart.py:604} DEBUG - Calling on_part_begin with no data
+[18:19:37] {multipart.py:601} DEBUG - Calling on_header_field with data[42:61]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_header_value with data[63:111]
+[18:19:37] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[18:19:37] {multipart.py:601} DEBUG - Calling on_header_field with data[113:125]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_header_value with data[127:136]
+[18:19:37] {multipart.py:604} DEBUG - Calling on_header_end with no data
+[18:19:37] {multipart.py:604} DEBUG - Calling on_headers_finished with no data
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[140:132032]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[132033:147456]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:26177]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[26178:65611]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[65612:262144]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:76860]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[76861:183104]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[183105:210287]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[210288:262144]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:17474]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[17475:39209]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[39210:82265]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[82266:141122]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[141123:183925]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[183926:188858]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[188859:210035]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[210036:253005]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[253006:262144]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:23125]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[0:1]
+[18:19:37] {multipart.py:601} DEBUG - Calling on_part_data with data[23126:200350]
+[18:19:37] {multipart.py:604} DEBUG - Calling on_part_end with no data
+[18:19:37] {multipart.py:604} DEBUG - Calling on_end with no data
+[18:19:37] {PngImagePlugin.py:186} DEBUG - STREAM b'IHDR' 16 13
+[18:19:37] {PngImagePlugin.py:186} DEBUG - STREAM b'zTXt' 41 11119
+[18:19:37] {PngImagePlugin.py:186} DEBUG - STREAM b'iTXt' 11172 2421
+[18:19:37] {PngImagePlugin.py:186} DEBUG - STREAM b'pHYs' 13605 9
+[18:19:37] {PngImagePlugin.py:186} DEBUG - STREAM b'IDAT' 13626 8192
+[18:20:18] {server.py:253} INFO - Shutting down
+[18:20:19] {server.py:85} INFO - Finished server process [2476]
+[18:20:19] {on.py:134} ERROR - Traceback (most recent call last):
+  File "C:\Users\PAC\miniconda3\lib\site-packages\starlette\routing.py", line 638, in lifespan
+    await receive()
+  File "C:\Users\PAC\miniconda3\lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+  File "C:\Users\PAC\miniconda3\lib\asyncio\queues.py", line 159, in get
+    await getter
+concurrent.futures._base.CancelledError
+

@@ -3,6 +3,15 @@ import cv2
 import warnings
 warnings.filterwarnings("ignore")
 
+def sort_points(pts):
+    pts_sort = pts[np.argsort(pts[:,1])]
+    pts_sort = np.array([pts_sort[np.argmin(pts_sort[:2,0])],
+                         pts_sort[np.argmax(pts_sort[:2,0])],
+                         pts_sort[np.argmax(pts_sort[2:,0])+2],
+                         pts_sort[np.argmin(pts_sort[2:,0])+2]])
+    ratio = (pts_sort[2,0] - pts_sort[3,0]) / (pts_sort[1,0] - pts_sort[0,0])
+    return pts_sort, ratio
+    
 def warp_grid(img, pts):
     
     pts_src, ratio = sort_points(pts)
