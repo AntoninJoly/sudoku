@@ -11,12 +11,17 @@ Digit classification model was trained using a mix of MNIST data and editor-made
 
 Grid semantic segmentation was trained using handmade labelled data, which original images were taken from the net, using resnet50+unet like architecture. Evaluation of this model achieved IoU:0.9785 - Dice:0.9891 on test data.
 
+# Unit test 🔬
+
+# REST api using FastApi 📡
+
+# Dockerization 📦
+
 # Overview & example 📈
 
 ![](/assets/example1.png)
 
 # To be done next 🛠
 Following steps are considered:
-- Mobile app implementation
-- Model speed up
-- Grid detection hyperparameter optimization
+[] Mobile app implementation
+[] Model quantization
